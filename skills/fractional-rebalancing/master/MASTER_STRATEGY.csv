@@ -1,0 +1,17 @@
+parameter,value,description
+strategy_version,0.1.0,Increment only when an approved strategy change is made
+toss_starting_capital_krw,100000,Starting capital for Toss Securities portfolio
+kakao_starting_capital_krw,100000,Starting capital for Kakao Pay Securities portfolio; verify provider/app
+review_daily,YES,Daily monitoring does not mean daily trading
+formal_rebalance_days,"1,15",Calendar days; move to next trading day if closed
+drift_threshold,0.05,Absolute target weight drift threshold as decimal (5 percentage points)
+cash_reserve_min,0.10,Initial minimum cash reserve share
+max_single_position_weight,0.35,Maximum weight per security
+max_sector_weight,0.50,Maximum sector exposure where sector data is available
+max_positions,5,Reduce if minimum orders or costs make small positions uneconomic
+candidate_count,5,Maximum number of candidates per review
+include_leverage_inverse,NO,Excluded by default
+auto_trade,NO,Live order execution is not allowed by this skill
+strategy_auto_change,PROPOSE_ONLY,User approves active strategy changes
+fee_model,USER_INPUT_REQUIRED,Enter actual commission spread FX and tax assumptions
+fractional_eligibility,VERIFY_PER_BROKER,Verify per ticker and broker before proposing order
