@@ -1,6 +1,10 @@
+import sys
 import unittest
+from pathlib import Path
 
-from skills.fractional_rebalancing.src.strategy_rules import (
+# Load the sibling src directory without relying on importable package names.
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
+from strategy_rules import (
     needs_rebalance, portfolio_weights, target_amount, target_drift,
     validate_target_weights,
 )
